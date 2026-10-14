@@ -1,0 +1,6 @@
+predicates
+	likes(symbol,symbol)
+	
+clauses
+	likes(ali,apple).
+	likes(ahmed,X) :- (ali,X).
