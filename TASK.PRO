@@ -1,0 +1,20 @@
+domains
+	int=integer
+	
+predicates
+	calc(int,int,char)
+	
+clauses
+	calc(X,Y,'+') :- Z=X+Y, write("Result ", X ," + " , Y ," = ",Z),!.
+	calc(X,Y,'-') :- Z=X-Y, write("Result ", X ," - " , Y ," = ",Z),!.
+	calc(X,Y,'*') :- Z=X*Y, write("Result ", X ," * " , Y ," = ",Z),!.
+ 	calc(X,Y,'/') :- Z=X/Y, write("Result ", X ," / " , Y ," = ",Z),!.
+goal
+	clearwindow,
+	write("Enter First Num: "),
+	readint(X),nl,
+	write("Enter Second Num: "),
+	readint(Y),nl,
+	write("operation: "),readchar(O),nl,
+	calc(X, Y, O).	
+	
